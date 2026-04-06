@@ -45,6 +45,26 @@ Requires Java 17+. Run `/kotlinsense:status` to verify.
 
 ---
 
+## Quick Start
+
+**1. Install the language server**
+```
+/kotlinsense:install
+```
+Downloads `kotlin-language-server` and adds it to your PATH. Requires Java 17+.
+
+**2. Verify it's working**
+```
+/kotlinsense:status
+```
+Confirms the binary, Java, and LSP connection are all ready.
+
+**3. Open a Kotlin project and start editing**
+
+Open any `.kt` file and make an edit. KotlinSense automatically injects diagnostics into Claude's context — type errors, missing imports, null safety violations — and Claude fixes them in the same turn.
+
+---
+
 ## How It Works
 
 ```
@@ -60,19 +80,6 @@ Claude fixes it immediately — same turn, no manual compile step
 ```
 
 The LSP connection is defined in `.lsp.json` and activates automatically when the plugin is enabled.
-
----
-
-## What You Get
-
-| Feature | Description |
-|---|---|
-| Auto diagnostics | After every `.kt` / `.kts` edit, type errors appear in Claude's context automatically |
-| Import resolution | Missing imports detected and flagged |
-| Null safety | Kotlin null safety violations caught before runtime |
-| Coroutine checks | Suspend function misuse flagged (wrong scope, GlobalScope, etc.) |
-| Code navigation | `/kotlinsense:navigate` for go-to-definition and find-references |
-| Android patterns | Built-in knowledge of ViewModel, StateFlow, Compose, Hilt patterns |
 
 ---
 
@@ -127,18 +134,13 @@ Install Java 17+ from [adoptium.net](https://adoptium.net/). Verify: `java -vers
 
 ---
 
-## Reference
-
-- Kotlin Language Server: [github.com/fwcd/kotlin-language-server](https://github.com/fwcd/kotlin-language-server)
-- Claude Code Plugins: [code.claude.com/docs/en/plugins](https://code.claude.com/docs/en/plugins)
-- Privacy Policy: [github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy](https://github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy)
-- Submit feedback: [github.com/SUDARSHANCHAUDHARI/KotlinSense/issues](https://github.com/SUDARSHANCHAUDHARI/KotlinSense/issues)
-
----
-
 ## Documentation
 
 For full details — complete command walkthroughs, diagnostics reference, first-time setup guide, troubleshooting, and plugin architecture — see [DOCUMENTATION.md](DOCUMENTATION.md).
+
+- Kotlin Language Server: [github.com/fwcd/kotlin-language-server](https://github.com/fwcd/kotlin-language-server)
+- Privacy Policy: [github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy](https://github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy)
+- Issues: [github.com/SUDARSHANCHAUDHARI/KotlinSense/issues](https://github.com/SUDARSHANCHAUDHARI/KotlinSense/issues)
 
 ---
 
