@@ -136,6 +136,12 @@ Install Java 17+ from [adoptium.net](https://adoptium.net/). Verify: `java -vers
 
 ---
 
+## Documentation
+
+For full details — complete command walkthroughs, diagnostics reference, first-time setup guide, troubleshooting, and plugin architecture — see [DOCUMENTATION.md](DOCUMENTATION.md).
+
+---
+
 ## Author
 
 **SUDARSHANCHAUDHARI** — [github.com/SUDARSHANCHAUDHARI](https://github.com/SUDARSHANCHAUDHARI)
