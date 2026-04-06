@@ -1,0 +1,16 @@
+{
+  "kotlin": {
+    "command": "kotlin-language-server",
+    "args": [],
+    "extensionToLanguage": {
+      ".kt": "kotlin",
+      ".kts": "kotlin"
+    },
+    "initializationOptions": {
+      "storagePath": "${workspaceFolder}/.kotlin-ls"
+    },
+    "restartOnCrash": true,
+    "maxRestarts": 3,
+    "startupTimeout": 60000
+  }
+}

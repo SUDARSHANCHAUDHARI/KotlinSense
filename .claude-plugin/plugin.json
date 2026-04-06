@@ -1,0 +1,13 @@
+{
+  "name": "kotlinsense",
+  "version": "1.0.0",
+  "description": "Kotlin language server for Claude Code. Automatic type-error diagnostics, missing import detection, and code navigation for Android and Kotlin projects.",
+  "author": {
+    "name": "SUDARSHANCHAUDHARI",
+    "url": "https://github.com/SUDARSHANCHAUDHARI"
+  },
+  "homepage": "https://github.com/SUDARSHANCHAUDHARI/KotlinSense",
+  "repository": "https://github.com/SUDARSHANCHAUDHARI/KotlinSense",
+  "license": "MIT",
+  "keywords": ["kotlin", "android", "lsp", "language-server", "type-checking", "code-intelligence"]
+}

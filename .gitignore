@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+.playwright-mcp/
+
+# Local planning/spec files
+PLUGIN_4_KOTLIN_LSP.md
