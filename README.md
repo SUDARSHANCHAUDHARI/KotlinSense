@@ -21,6 +21,12 @@ Works for any Kotlin or Android developer. No project-specific config needed —
 
 ## Install
 
+**Step 1 — Add the marketplace**
+```bash
+/plugin marketplace add SUDARSHANCHAUDHARI/KotlinSense
+```
+
+**Step 2 — Install the plugin**
 ```bash
 /plugin install kotlinsense
 ```
