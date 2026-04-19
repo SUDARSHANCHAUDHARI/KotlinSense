@@ -153,7 +153,7 @@ For full details — complete command walkthroughs, diagnostics reference, first
 ## Author
 
 **SUDARSHANCHAUDHARI** — [github.com/SUDARSHANCHAUDHARI](https://github.com/SUDARSHANCHAUDHARI)
-SudarshanTechLabs | sudarshantechlabs@gmail.com
+SudarshanTechLabs
 
 ---
 
