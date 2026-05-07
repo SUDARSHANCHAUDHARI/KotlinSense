@@ -17,6 +17,13 @@
 
 Works for any Kotlin or Android developer. No project-specific config needed — just install the binary and go.
 
+## Why This Exists
+
+AI code generation for Kotlin without LSP context produces suggestions that compile but fail at runtime. Missing imports get suggested. Incorrect types get inferred. Null safety violations get introduced. The suggestions look plausible but are wrong in ways that only the Kotlin compiler would catch.
+
+KotlinSense bridges `kotlin-language-server` into Claude Code's context. After every `.kt` file edit, real diagnostics — type errors, missing imports, null safety violations — are injected automatically. Claude sees what the compiler sees and fixes issues in the same turn, before they reach the build.
+
+
 ---
 
 ## Install
