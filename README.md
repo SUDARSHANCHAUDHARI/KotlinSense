@@ -1,13 +1,42 @@
-# KotlinSense — Claude Code Plugin
+# KotlinSense
 
-> Kotlin code intelligence for Claude Code. Automatic type checking, import resolution, null safety detection, and error diagnostics injected directly into Claude's context after every `.kt` file edit.
-
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](.claude-plugin/plugin.json)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-Claude%20Code-blueviolet)
 ![Target](https://img.shields.io/badge/target-Kotlin%20%2F%20Android-brightgreen)
 
----
+> Kotlin code intelligence for Claude Code — automatic type checking, import resolution, null safety detection, and error diagnostics injected directly into Claude's context after every `.kt` file edit.
+
+**KotlinSense** is a Claude Code plugin that bridges `kotlin-language-server` into Claude's
+context, so Claude sees what the Kotlin compiler sees and fixes issues in the same turn —
+before they reach the build.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [What It Does](#what-it-does)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Commands](#commands)
+- [How It Works](#how-it-works)
+- [Plugin Structure](#plugin-structure)
+- [Requirements](#requirements)
+- [Troubleshooting](#troubleshooting)
+- [Documentation](#documentation)
+- [License](#license)
+- [About](#about)
+
+## Overview
+
+AI code generation for Kotlin without LSP context produces suggestions that compile but fail
+at runtime. Missing imports get suggested. Incorrect types get inferred. Null safety violations
+get introduced. The suggestions look plausible but are wrong in ways that only the Kotlin
+compiler would catch.
+
+KotlinSense bridges `kotlin-language-server` into Claude Code's context. After every `.kt` file
+edit, real diagnostics — type errors, missing imports, null safety violations — are injected
+automatically. Claude sees what the compiler sees and fixes issues in the same turn, before
+they reach the build.
 
 ## What It Does
 
@@ -17,16 +46,7 @@
 
 Works for any Kotlin or Android developer. No project-specific config needed — just install the binary and go.
 
-## Why This Exists
-
-AI code generation for Kotlin without LSP context produces suggestions that compile but fail at runtime. Missing imports get suggested. Incorrect types get inferred. Null safety violations get introduced. The suggestions look plausible but are wrong in ways that only the Kotlin compiler would catch.
-
-KotlinSense bridges `kotlin-language-server` into Claude Code's context. After every `.kt` file edit, real diagnostics — type errors, missing imports, null safety violations — are injected automatically. Claude sees what the compiler sees and fixes issues in the same turn, before they reach the build.
-
-
----
-
-## Install
+## Installation
 
 **Step 1 — Add the marketplace**
 ```bash
@@ -46,18 +66,6 @@ Then install the language server binary:
 
 Requires Java 17+. Run `/kotlinsense:status` to verify.
 
----
-
-## Commands
-
-| Command | Description |
-|---|---|
-| `/kotlinsense:install` | Download and install `kotlin-language-server` |
-| `/kotlinsense:status` | Check binary, Java, and LSP activation status |
-| `/kotlinsense:navigate` | Go-to-definition, find references, type inspection |
-
----
-
 ## Quick Start
 
 **1. Install the language server**
@@ -76,7 +84,13 @@ Confirms the binary, Java, and LSP connection are all ready.
 
 Open any `.kt` file and make an edit. KotlinSense automatically injects diagnostics into Claude's context — type errors, missing imports, null safety violations — and Claude fixes them in the same turn.
 
----
+## Commands
+
+| Command | Description |
+|---|---|
+| `/kotlinsense:install` | Download and install `kotlin-language-server` |
+| `/kotlinsense:status` | Check binary, Java, and LSP activation status |
+| `/kotlinsense:navigate` | Go-to-definition, find references, type inspection |
 
 ## How It Works
 
@@ -93,8 +107,6 @@ Claude fixes it immediately — same turn, no manual compile step
 ```
 
 The LSP connection is defined in `.lsp.json` and activates automatically when the plugin is enabled.
-
----
 
 ## Plugin Structure
 
@@ -118,15 +130,11 @@ KotlinSense/
 └── LICENSE
 ```
 
----
-
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) installed and authenticated
 - Java 17+ (`java -version` to check — install from [adoptium.net](https://adoptium.net/))
 - Internet connection for initial binary download (~50 MB)
-
----
 
 ## Troubleshooting
 
@@ -145,8 +153,6 @@ Run `./gradlew build` first so annotation processors generate their output, then
 **Java not found**
 Install Java 17+ from [adoptium.net](https://adoptium.net/). Verify: `java -version`.
 
----
-
 ## Documentation
 
 For full details — complete command walkthroughs, diagnostics reference, first-time setup guide, troubleshooting, and plugin architecture — see [DOCUMENTATION.md](DOCUMENTATION.md).
@@ -155,15 +161,32 @@ For full details — complete command walkthroughs, diagnostics reference, first
 - Privacy Policy: [github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy](https://github.com/SUDARSHANCHAUDHARI/kotlinsense-claude-plugin-privacy-policy)
 - Issues: [github.com/SUDARSHANCHAUDHARI/KotlinSense/issues](https://github.com/SUDARSHANCHAUDHARI/KotlinSense/issues)
 
----
-
-## Author
-
-**SUDARSHANCHAUDHARI** — [github.com/SUDARSHANCHAUDHARI](https://github.com/SUDARSHANCHAUDHARI)
-SudarshanTechLabs
-
----
-
 ## License
 
-MIT — see [LICENSE](LICENSE)
+MIT — see [LICENSE](LICENSE).
+
+---
+
+## About
+
+I'm Sudarshan Chaudhari, a Senior Quality Engineer, Test Automation specialist, and AI systems builder based in Bangkok, Thailand.
+
+I have 13+ years of experience in software quality engineering, working across SaaS, fintech, gaming, web, mobile, cloud, and digital signage platforms. My background combines hands-on test automation with QA leadership, test strategy, CI/CD, release quality, production investigation, and cross-platform validation.
+
+Alongside my professional QA career, I run [SudarshanTechLabs](https://sudarshantechlabs.com/), my independent engineering and product lab where I design, build, test, and ship software across Android, web, AI, cybersecurity, developer tooling, and cross-platform applications.
+
+### What I work on
+
+- ⚙️ **Quality Engineering & Test Automation** — Playwright, Selenium, Cypress, Appium, API testing, automation frameworks, end-to-end testing, CI/CD, release gates, GitHub Actions, risk-based testing, and production validation
+- 🤖 **AI Systems & Automation** — AI agents, multi-agent orchestration, MCP servers, AI-assisted QA, prompt tooling, developer workflows, automation systems, and Claude Code plugins
+- 📱 **Mobile & Cross-Platform Applications** — Android applications built with Kotlin and Jetpack Compose, Google Play releases, automated build and publishing pipelines, and cross-platform development spanning iOS, web, Windows, and macOS
+- 🌐 **Web Applications & Platforms** — Full-stack applications using Next.js, TypeScript, Firebase, Cloudflare, REST APIs, and modern web infrastructure
+- 🛠️ **Developer Tooling & CLI Engineering** — Rust, Python, TypeScript, CLI utilities, multi-repository tooling, build automation, release tooling, and engineering productivity systems
+- 🛡️ **Cybersecurity & Observability** — Threat detection, log analysis, security auditing, vulnerability assessment, monitoring, and security-focused developer tools
+- 📺 **Digital Signage & Device Platforms** — Content validation, playback testing, device compatibility, production investigation, monitoring, and QA across diverse hardware and operating-system environments
+
+My work sits at the intersection of quality engineering, automation, AI, and software development. I approach products with a QA mindset from the beginning: understanding failure modes, designing for testability, automating repetitive work, and building release confidence into the engineering process.
+
+Through SudarshanTechLabs, I also build products and tools from idea to production, covering architecture, development, testing, CI/CD, release automation, monitoring, and ongoing maintenance.
+
+🌐 [sudarshantechlabs.com](https://sudarshantechlabs.com/) · 💼 [LinkedIn](https://linkedin.com/in/sudarshan-chaudhari) · 🐙 [GitHub](https://github.com/SUDARSHANCHAUDHARI) · ✉️ [sunny.sudarshan@gmail.com](mailto:sunny.sudarshan@gmail.com)
