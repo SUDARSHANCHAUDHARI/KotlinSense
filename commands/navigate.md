@@ -1,3 +1,7 @@
+---
+description: Navigate a Kotlin project with KotlinSense (definitions, usages, types, symbols)
+---
+
 Use KotlinSense navigation features to explore the current Kotlin project.
 
 Ask the user which navigation operation they need, then assist using LSP-backed information:

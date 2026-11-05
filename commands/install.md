@@ -1,3 +1,7 @@
+---
+description: Install the Kotlin Language Server binary required by the KotlinSense plugin
+---
+
 Install the Kotlin Language Server binary required by the KotlinSense plugin.
 
 ## Steps
