@@ -1,3 +1,7 @@
+---
+description: Check the status of the KotlinSense Kotlin Language Server plugin
+---
+
 Check the status of the KotlinSense Kotlin Language Server plugin.
 
 ## Steps

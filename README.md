@@ -72,13 +72,15 @@ Requires Java 17+. Run `/kotlinsense:status` to verify.
 ```
 /kotlinsense:install
 ```
-Downloads `kotlin-language-server` and adds it to your PATH. Requires Java 17+.
+Downloads `kotlin-language-server` and symlinks it into `~/.local/bin`. Requires Java 17+.
 
 **2. Verify it's working**
 ```
 /kotlinsense:status
 ```
 Confirms the binary, Java, and LSP connection are all ready.
+
+Add `.kotlin-ls/` to your project's `.gitignore`. The language server writes its per-project storage there.
 
 **3. Open a Kotlin project and start editing**
 
